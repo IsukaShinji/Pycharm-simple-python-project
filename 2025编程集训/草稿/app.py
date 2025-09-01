@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import retriever
+import os
 
 app = Flask(__name__)
 

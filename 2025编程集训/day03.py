@@ -18,6 +18,13 @@ def load_stopwords(stopwords_path="stopwords.txt"):
         stopwords = {"the", "a", "an", "in", "on", "at", "of", "to"}
     return stopwords
 
+def bigram_tokenize(text: str) -> list:
+    """生成文本的二元分词结果（相邻字符组合）"""
+    text = text.strip()
+    if len(text) < 2:
+        return [text] if text else []
+    return [text[i] + text[i+1] for i in range(len(text) - 1)]
+
 
 def restore_url_from_filename(filename):
     if not filename.endswith('.html'):
@@ -79,14 +86,12 @@ def process_single_html(html_path, stopwords):
                 f.write(text)
             print(f"📋 已保存提取文本: {debug_text_path}")
 
-        words = jieba.cut(text, cut_all=False)
-        filtered_words = [
-            word for word in words
-            if word.strip()
-               and word.strip() not in stopwords
-               and not word.strip().isdigit()
-               and not (word.strip() in ',.!?;:"\'()[]{}、，。！？；：“”‘’（）【】{}')
-        ]
+            # jieba分词
+            jieba_words = [w for w in jieba.cut(text, cut_all=False) if w.strip() and w not in stopwords]
+            # 二元分词
+            bigram_words = [w for w in bigram_tokenize(text) if w.strip() and w not in stopwords]
+            # 合并去重
+            filtered_words = list(set(jieba_words + bigram_words))
 
         target_count = filtered_words.count("人工智能")
         if target_count > 20:
@@ -234,7 +239,10 @@ def load_existing_data():
 
 
 def parse_query(query):
-    return [q.strip() for q in query.split() if q.strip()]
+    """查询词同时进行jieba分词和二元分词，合并去重"""
+    jieba_terms = [q.strip() for q in jieba.cut(query) if q.strip()]
+    bigram_terms = bigram_tokenize(query)
+    return list(set(jieba_terms + bigram_terms))  # 去重合并
 
 
 def calculate_bm25_score(term, docid, tf, doc_length, avg_doc_length, N, df, k1=1.2, b=0.75):
@@ -353,4 +361,3 @@ if __name__ == "__main__":
     import numpy as np  # 延迟导入，仅在运行时需要
 
     main()
-
