@@ -15,3 +15,15 @@ __pycache__/
 # 忽略临时文件/日志
 *.log
 tmp/
+
+# 忽略特定的数据集文件夹（强烈建议）
+25秋人工智能引论/lab8/data/
+
+# 忽略所有常见的超大文件格式
+*.tar.gz
+*.zip
+*.rar
+*.pth      # PyTorch 模型权重文件
+*.npy      # numpy 数组数据
+*.pickle   # 序列化数据文件
+*.pt       # PyTorch 模型文件
