@@ -10,7 +10,6 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from collections import deque
 
-
 # 全局唯一锁（保证多线程下编号/队列安全）
 global_lock = threading.Lock()
 
@@ -20,7 +19,6 @@ USER_AGENTS = [
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15',
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0'
 ]
-
 
 def get_html_with_timeout(url, timeout=15):
     """跨平台超时请求（替代signal，Windows兼容）"""
@@ -51,7 +49,6 @@ def extract_links(html, base_url, allowed_prefixes):
         print(f"❌ 页面内容为空，无法提取链接（base_url: {base_url}）")
         return links
 
-    # -------- 新增：定义“允许的网页后缀”和“排除的非网页后缀” --------
     # 允许的网页后缀（空字符串表示无后缀的网页URL）
     allowed_extensions = {'.html', '.htm', ''}
     # 需排除的非网页后缀（图片、PDF、文档、视频等）
@@ -81,7 +78,6 @@ def extract_links(html, base_url, allowed_prefixes):
             # 提取路径的后缀（如 "/index.html" → ".html"）
             ext = os.path.splitext(path)[1].lower()
 
-            # -------- 新增：后缀过滤逻辑 --------
             # 条件：后缀是“允许的网页后缀” 或 “不属于排除的非网页后缀”
             if ext in allowed_extensions or ext not in excluded_extensions:
                 norm_url = f"{parsed.scheme}://{parsed.netloc}{path}".rstrip('/')
@@ -94,7 +90,6 @@ def extract_links(html, base_url, allowed_prefixes):
     except Exception as e:
         print(f"❌ 提取链接失败（base_url: {base_url}）：{str(e)}")
         return links
-
 
 def get_global_max_number(save_dir):
     """获取目录中已存文件的最大编号（保证编号唯一）"""
@@ -110,7 +105,6 @@ def get_global_max_number(save_dir):
             except:
                 continue
     return max_num
-
 
 def save_html(html, url, save_dir, global_counter):
     """保存HTML文件，生成全局唯一编号"""
@@ -137,7 +131,6 @@ def save_html(html, url, save_dir, global_counter):
         except Exception as e:
             print(f"⚠️ 保存文件失败（{url}）：{str(e)}")
             return False, -1, None
-
 
 def save_progress(progress_path, data):
     """保存爬取进度（临时文件防损坏）"""
@@ -303,7 +296,7 @@ def main():
                     queue.append(url)  # 异常URL放回队列
                 time.sleep(1)
 
-    # ---------------------- 启动15个工作线程 ----------------------
+    # 启动工作线程
     print(f"开始爬取（线程数：{max_workers}）| 起始编号：{global_counter[0]}")
     try:
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -312,7 +305,7 @@ def main():
     except Exception as e:
         print(f"主进程错误: {str(e)}")
 
-    # ---------------------- 爬取结束，最终保存进度 ----------------------
+    #  爬取结束，最终保存进度
     with global_lock:
         save_progress(progress_path, {
             "total_crawled": total_crawled,
