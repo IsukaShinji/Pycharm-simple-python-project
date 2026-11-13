@@ -1,0 +1,25 @@
+{'attn': 'scaled_dot', 'seed': 1630, 'hard_train': True, 'plot_only': False, 'min_len': 5, 'max_len': 30, 'emb_dim': 32, 'hidden_dim': 128, 'batch_size': 64, 'steps': 4000, 'lr': 0.001, 'clip': 1.0, 'eval_interval': 250}
+模型可训练参数量: 182235
+step   250/4000 | train loss 2.8811 | test token_acc 0.1585 | test seq_acc 0.0052 | time 82s
+step   500/4000 | train loss 2.0676 | test token_acc 0.2648 | test seq_acc 0.0463 | time 160s
+step   750/4000 | train loss 1.8197 | test token_acc 0.2980 | test seq_acc 0.0608 | time 241s
+step  1000/4000 | train loss 1.7532 | test token_acc 0.3118 | test seq_acc 0.0667 | time 325s
+step  1250/4000 | train loss 1.6391 | test token_acc 0.3218 | test seq_acc 0.0771 | time 409s
+step  1500/4000 | train loss 1.5142 | test token_acc 0.3297 | test seq_acc 0.0835 | time 490s
+step  1750/4000 | train loss 1.4784 | test token_acc 0.3379 | test seq_acc 0.0858 | time 570s
+step  2000/4000 | train loss 1.5161 | test token_acc 0.3423 | test seq_acc 0.0933 | time 653s
+step  2250/4000 | train loss 1.5048 | test token_acc 0.3534 | test seq_acc 0.0983 | time 744s
+step  2500/4000 | train loss 1.4645 | test token_acc 0.3552 | test seq_acc 0.1002 | time 837s
+step  2750/4000 | train loss 1.3964 | test token_acc 0.3603 | test seq_acc 0.1115 | time 910s
+step  3000/4000 | train loss 1.3431 | test token_acc 0.3622 | test seq_acc 0.1113 | time 965s
+step  3250/4000 | train loss 1.2961 | test token_acc 0.3874 | test seq_acc 0.1329 | time 1019s
+step  3500/4000 | train loss 1.2205 | test token_acc 0.4047 | test seq_acc 0.1415 | time 1073s
+step  3750/4000 | train loss 1.1659 | test token_acc 0.4091 | test seq_acc 0.1400 | time 1127s
+step  4000/4000 | train loss 1.1139 | test token_acc 0.4146 | test seq_acc 0.1471 | time 1182s
+[最终结果] 平均 token_acc 0.4146 | 平均 seq_acc 0.1471
+[各长度 token_acc] 5:0.981 6:0.957 7:0.916 8:0.819 9:0.728 10:0.653 11:0.544 12:0.518 13:0.447 14:0.396 15:0.357 16:0.343 17:0.297 18:0.287 19:0.273 20:0.269 21:0.241 22:0.225 23:0.228 24:0.207 25:0.195 26:0.193 27:0.179 28:0.183 29:0.173 30:0.172
+[说明] 该模型训练和测试均使用硬注意力；以下对齐准确率、平均最大注意力权重和热力图基于 one-hot 之前的软注意力权重（即打分函数学到的分布）
+[对齐准确率] L=10:0.043 L=20:0.013 L=30:0.011
+[平均最大注意力权重] L=10:0.109 L=20:0.060 L=30:0.043
+实验结果已保存到 results\scaled_dot_hardtrain_seed1630.json，模型参数已保存到 checkpoints\scaled_dot_hardtrain_seed1630.pt，总用时 1186s
+注意力热力图已保存到 figures\heatmap_scaled_dot_hardtrain_seed1630.png

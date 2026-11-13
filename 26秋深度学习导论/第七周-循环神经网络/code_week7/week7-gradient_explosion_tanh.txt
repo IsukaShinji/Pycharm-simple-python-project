@@ -1,0 +1,33 @@
+---BOOM 0.0--- activation=tanh, clip=0.0, time=Oct-26-2026_21-11-11
+
+---------------SEQ LEN: 300-------------
+global grad norm before clip: 2.812026e+02 | after clip: 2.812026e+02
+i2h.weight, parameters grad: tensor([[0., 0., 0.],
+        [0., 0., 0.]])
+i2h.bias, parameters grad: tensor([0., 0.])
+i2o.weight, parameters grad: tensor([[-162.3524, -162.3524]])
+i2o.bias, parameters grad: tensor([-162.3524])
+
+---------------SEQ LEN: 600-------------
+global grad norm before clip: 2.396333e+02 | after clip: 2.396333e+02
+i2h.weight, parameters grad: tensor([[0., 0., 0.],
+        [0., 0., 0.]])
+i2h.bias, parameters grad: tensor([0., 0.])
+i2o.weight, parameters grad: tensor([[-138.3523, -138.3523]])
+i2o.bias, parameters grad: tensor([-138.3523])
+
+---------------SEQ LEN: 1500-------------
+global grad norm before clip: 2.950588e+02 | after clip: 2.950588e+02
+i2h.weight, parameters grad: tensor([[0., 0., 0.],
+        [0., 0., 0.]])
+i2h.bias, parameters grad: tensor([0., 0.])
+i2o.weight, parameters grad: tensor([[-170.3523, -170.3523]])
+i2o.bias, parameters grad: tensor([-170.3523])
+
+---------------SEQ LEN: 2999-------------
+global grad norm before clip: 2.638818e+02 | after clip: 2.638818e+02
+i2h.weight, parameters grad: tensor([[0., 0., 0.],
+        [0., 0., 0.]])
+i2h.bias, parameters grad: tensor([0., 0.])
+i2o.weight, parameters grad: tensor([[-152.3522, -152.3522]])
+i2o.bias, parameters grad: tensor([-152.3522])

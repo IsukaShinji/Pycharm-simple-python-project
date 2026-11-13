@@ -1,0 +1,33 @@
+---BOOM 0.0--- activation=leaky_relu, clip=0.0, time=Oct-26-2026_21-11-24
+
+---------------SEQ LEN: 300-------------
+global grad norm before clip: 2.832940e+08 | after clip: 2.832940e+08
+i2h.weight, parameters grad: tensor([[ 1.2400e+07,  2.8289e+08, -5.8630e+05],
+        [-3.7615e+04, -8.5975e+05,  1.7775e+03]])
+i2h.bias, parameters grad: tensor([139932.1875,   -427.1523])
+i2o.weight, parameters grad: tensor([[8702220.0000,  -18188.2559]])
+i2o.bias, parameters grad: tensor([4581.4790])
+
+---------------SEQ LEN: 600-------------
+global grad norm before clip: 3.171310e+08 | after clip: 3.171310e+08
+i2h.weight, parameters grad: tensor([[ 1.4917e+07,  3.1660e+08, -6.4101e+05],
+        [-4.4561e+04, -9.6784e+05,  1.9740e+03]])
+i2h.bias, parameters grad: tensor([154060.2188,   -470.1806])
+i2o.weight, parameters grad: tensor([[10470714.0000,   -23160.3223]])
+i2o.bias, parameters grad: tensor([5045.3120])
+
+---------------SEQ LEN: 1500-------------
+global grad norm before clip: 2.770041e+08 | after clip: 2.770041e+08
+i2h.weight, parameters grad: tensor([[ 1.2144e+07,  2.7660e+08, -5.7337e+05],
+        [-3.6974e+04, -8.4056e+05,  1.7419e+03]])
+i2h.bias, parameters grad: tensor([138257.4688,   -421.9489])
+i2o.weight, parameters grad: tensor([[8522021.0000,  -17530.9316]])
+i2o.bias, parameters grad: tensor([4528.9355])
+
+---------------SEQ LEN: 2999-------------
+global grad norm before clip: 2.938481e+08 | after clip: 2.938481e+08
+i2h.weight, parameters grad: tensor([[ 1.3046e+07,  2.9341e+08, -6.0511e+05],
+        [-3.9337e+04, -8.9276e+05,  1.8465e+03]])
+i2h.bias, parameters grad: tensor([143639.7656,   -438.3730])
+i2o.weight, parameters grad: tensor([[9156047.0000,  -19559.6641]])
+i2o.bias, parameters grad: tensor([4706.4355])

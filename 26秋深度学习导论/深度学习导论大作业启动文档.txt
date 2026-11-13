@@ -1,0 +1,4 @@
+cd "/mnt/e/Code Project/Pycharm/Python project/26秋深度学习导论" 
+code -r .
+
+codex resume 01a09fc2-ac01-7d53-83d0-efa9f1d8256b

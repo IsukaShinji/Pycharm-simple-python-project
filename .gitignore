@@ -1,7 +1,9 @@
 # 忽略 Python 虚拟环境
 .venv/
+.venv2/
 env/
 venv/
+gpu_env/
 
 # 忽略 PyCharm 配置文件
 .idea/
@@ -18,12 +20,37 @@ tmp/
 
 # 忽略特定的数据集文件夹（强烈建议）
 25秋人工智能引论/lab8/data/
+26秋迁移学习/data/
+26秋迁移学习/outputs/
+26秋迁移学习/runs/
 
 # 忽略所有常见的超大文件格式
+# 注意：git 不支持行尾注释，规则必须独占一行，否则整行会被当作通配符而失效
 *.tar.gz
 *.zip
 *.rar
-*.pth      # PyTorch 模型权重文件
-*.npy      # numpy 数组数据
-*.pickle   # 序列化数据文件
-*.pt       # PyTorch 模型文件
+*.pth
+*.pt
+*.ckpt
+*.npy
+*.npz
+*.pickle
+*.onnx
+
+# 迁移学习课程材料：课件体积大（单文件最大 145 MB，超过 GitHub 100 MB 硬限制）
+# 只提交代码与笔记，课件与数据集留在本地
+26秋迁移学习/课件/*.pptx
+26秋迁移学习/课件/*.pdf
+26秋迁移学习/期末材料/*.pdf
+26秋迁移学习/分工留档/
+26秋迁移学习/data/
+26秋迁移学习/outputs/
+
+# AI CLI 本地配置与缓存
+.codex/
+.workbuddy/
+
+# 课程数据集与大体积权重
+**/datasets/
+*.pth
+*.pt

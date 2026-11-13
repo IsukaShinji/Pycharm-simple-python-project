@@ -1,0 +1,21 @@
+{'attn': 'none', 'seed': 1630, 'hard_train': False, 'plot_only': False, 'min_len': 5, 'max_len': 30, 'emb_dim': 32, 'hidden_dim': 128, 'batch_size': 64, 'steps': 4000, 'lr': 0.001, 'clip': 1.0, 'eval_interval': 250}
+模型可训练参数量: 182235
+step   250/4000 | train loss 2.6769 | test token_acc 0.1506 | test seq_acc 0.0063 | time 39s
+step   500/4000 | train loss 1.8771 | test token_acc 0.2498 | test seq_acc 0.0481 | time 76s
+step   750/4000 | train loss 1.6033 | test token_acc 0.2986 | test seq_acc 0.0677 | time 116s
+step  1000/4000 | train loss 1.5050 | test token_acc 0.3434 | test seq_acc 0.0973 | time 184s
+step  1250/4000 | train loss 1.3603 | test token_acc 0.3593 | test seq_acc 0.1050 | time 251s
+step  1500/4000 | train loss 1.2220 | test token_acc 0.3819 | test seq_acc 0.1177 | time 314s
+step  1750/4000 | train loss 1.1608 | test token_acc 0.4027 | test seq_acc 0.1263 | time 382s
+step  2000/4000 | train loss 1.1673 | test token_acc 0.4132 | test seq_acc 0.1458 | time 448s
+step  2250/4000 | train loss 1.1512 | test token_acc 0.4221 | test seq_acc 0.1496 | time 520s
+step  2500/4000 | train loss 1.0904 | test token_acc 0.4301 | test seq_acc 0.1523 | time 590s
+step  2750/4000 | train loss 1.0203 | test token_acc 0.4549 | test seq_acc 0.1762 | time 659s
+step  3000/4000 | train loss 0.9589 | test token_acc 0.4711 | test seq_acc 0.1817 | time 726s
+step  3250/4000 | train loss 0.9065 | test token_acc 0.4931 | test seq_acc 0.2071 | time 804s
+step  3500/4000 | train loss 0.8337 | test token_acc 0.5077 | test seq_acc 0.2179 | time 866s
+step  3750/4000 | train loss 0.7842 | test token_acc 0.5116 | test seq_acc 0.2229 | time 936s
+step  4000/4000 | train loss 0.7396 | test token_acc 0.5112 | test seq_acc 0.2217 | time 1003s
+[最终结果] 平均 token_acc 0.5112 | 平均 seq_acc 0.2217
+[各长度 token_acc] 5:0.996 6:0.995 7:0.966 8:0.948 9:0.902 10:0.823 11:0.758 12:0.694 13:0.609 14:0.555 15:0.486 16:0.457 17:0.427 18:0.379 19:0.373 20:0.338 21:0.319 22:0.304 23:0.281 24:0.281 25:0.269 26:0.248 27:0.236 28:0.234 29:0.207 30:0.207
+实验结果已保存到 results\none_seed1630.json，模型参数已保存到 checkpoints\none_seed1630.pt，总用时 1005s

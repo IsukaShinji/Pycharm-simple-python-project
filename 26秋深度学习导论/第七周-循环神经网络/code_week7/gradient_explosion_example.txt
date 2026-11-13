@@ -1,0 +1,28 @@
+---BOOM 0.0---
+---------------SEQ LEN: 300-------------
+i2h.weight, parameters grad: tensor([[ 5.0740e+13,  6.3944e+15, -1.9215e+15],
+        [-1.6948e+13, -2.1542e+15,  6.4757e+14]])
+i2h.bias, parameters grad: tensor([ 5.1096e+11, -1.7067e+11])
+i2o.weight, parameters grad: tensor([[-5.9098e+06, -2.2932e+13,  7.1635e+12]])
+i2o.bias, parameters grad: tensor([-72960.9766])
+
+---------------SEQ LEN: 600-------------
+i2h.weight, parameters grad: tensor([[ 4.4342e+24,  1.1647e+27, -3.5717e+26],
+        [-1.4810e+24, -3.9061e+26,  1.1980e+26]])
+i2h.bias, parameters grad: tensor([ 4.4654e+22, -1.4914e+22])
+i2o.weight, parameters grad: tensor([[-1.4882e+12, -2.0041e+24,  6.2601e+23]])
+i2o.bias, parameters grad: tensor([-2.1568e+10])
+
+---------------SEQ LEN: 1500-------------
+i2h.weight, parameters grad: tensor([[inf, nan, nan],
+        [-inf, nan, nan]])
+i2h.bias, parameters grad: tensor([inf, -inf])
+i2o.weight, parameters grad: tensor([[-4.7966e+28,        -inf,         inf]])
+i2o.bias, parameters grad: tensor([-5.6431e+26])
+
+---------------SEQ LEN: 2999-------------
+i2h.weight, parameters grad: tensor([[nan, nan, nan],
+        [nan, nan, nan]])
+i2h.bias, parameters grad: tensor([nan, nan])
+i2o.weight, parameters grad: tensor([[nan, nan, nan]])
+i2o.bias, parameters grad: tensor([nan])

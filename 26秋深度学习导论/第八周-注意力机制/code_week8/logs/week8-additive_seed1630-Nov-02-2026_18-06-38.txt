@@ -1,0 +1,24 @@
+{'attn': 'additive', 'seed': 1630, 'hard_train': False, 'plot_only': False, 'min_len': 5, 'max_len': 30, 'emb_dim': 32, 'hidden_dim': 128, 'batch_size': 64, 'steps': 4000, 'lr': 0.001, 'clip': 1.0, 'eval_interval': 250}
+模型可训练参数量: 215131
+step   250/4000 | train loss 2.1414 | test token_acc 0.6692 | test seq_acc 0.2035 | time 131s
+step   500/4000 | train loss 0.5746 | test token_acc 0.7156 | test seq_acc 0.3148 | time 256s
+step   750/4000 | train loss 0.2245 | test token_acc 0.9619 | test seq_acc 0.8106 | time 387s
+step  1000/4000 | train loss 0.0755 | test token_acc 0.9840 | test seq_acc 0.9267 | time 523s
+step  1250/4000 | train loss 0.0290 | test token_acc 0.9934 | test seq_acc 0.9679 | time 658s
+step  1500/4000 | train loss 0.0593 | test token_acc 0.8048 | test seq_acc 0.5348 | time 795s
+step  1750/4000 | train loss 0.0599 | test token_acc 0.9961 | test seq_acc 0.9775 | time 918s
+step  2000/4000 | train loss 0.0172 | test token_acc 0.9972 | test seq_acc 0.9806 | time 1007s
+step  2250/4000 | train loss 0.0195 | test token_acc 0.9972 | test seq_acc 0.9844 | time 1098s
+step  2500/4000 | train loss 0.0157 | test token_acc 0.9933 | test seq_acc 0.9783 | time 1192s
+step  2750/4000 | train loss 0.0128 | test token_acc 0.9998 | test seq_acc 0.9992 | time 1263s
+step  3000/4000 | train loss 0.0152 | test token_acc 0.9947 | test seq_acc 0.9675 | time 1320s
+step  3250/4000 | train loss 0.0093 | test token_acc 0.9992 | test seq_acc 0.9950 | time 1376s
+step  3500/4000 | train loss 0.0008 | test token_acc 0.9999 | test seq_acc 0.9988 | time 1432s
+step  3750/4000 | train loss 0.0004 | test token_acc 0.9999 | test seq_acc 0.9988 | time 1485s
+step  4000/4000 | train loss 0.0004 | test token_acc 0.9999 | test seq_acc 0.9992 | time 1538s
+[最终结果] 平均 token_acc 0.9999 | 平均 seq_acc 0.9992
+[各长度 token_acc] 5:1.000 6:1.000 7:1.000 8:1.000 9:1.000 10:1.000 11:1.000 12:1.000 13:1.000 14:1.000 15:1.000 16:1.000 17:1.000 18:1.000 19:1.000 20:0.998 21:1.000 22:1.000 23:1.000 24:1.000 25:1.000 26:1.000 27:1.000 28:1.000 29:1.000 30:0.999
+[对齐准确率] L=10:0.999 L=20:0.998 L=30:0.999
+[平均最大注意力权重] L=10:0.710 L=20:0.712 L=30:0.703
+实验结果已保存到 results\additive_seed1630.json，模型参数已保存到 checkpoints\additive_seed1630.pt，总用时 1541s
+注意力热力图已保存到 figures\heatmap_additive_seed1630.png

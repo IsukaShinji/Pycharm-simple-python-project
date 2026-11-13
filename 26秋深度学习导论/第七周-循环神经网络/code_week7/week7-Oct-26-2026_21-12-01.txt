@@ -1,0 +1,12 @@
+Namespace(filepath='surnames/surnames.csv', test_size=0.2, batch_size=16, hidden_size=128, max_epoch=5000, learning_rate=0.001, cuda=False, log_file_path='./', log_file='./week7-Oct-26-2026_21-12-01.txt')
+loss for 0/5000 : 2.8830 | ACC: 0.08697632058287796
+loss for 500/5000 : 0.9621 | ACC: 0.5742258652094717
+loss for 1000/5000 : 1.8777 | ACC: 0.6443533697632058
+loss for 1500/5000 : 0.9165 | ACC: 0.6584699453551912
+loss for 2000/5000 : 0.7255 | ACC: 0.6839708561020036
+loss for 2500/5000 : 1.0771 | ACC: 0.6857923497267759
+loss for 3000/5000 : 0.7840 | ACC: 0.6939890710382514
+loss for 3500/5000 : 1.1818 | ACC: 0.7040072859744991
+loss for 4000/5000 : 0.7421 | ACC: 0.7085610200364298
+loss for 4500/5000 : 1.2298 | ACC: 0.72632058287796
+loss for 4999/5000 : 0.5251 | ACC: 0.7176684881602914
